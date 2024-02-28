@@ -1,6 +1,20 @@
 return {
     "goolord/alpha-nvim",
-    config = function()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function ()
+        local updatedStyle = require"alpha.themes.startify"
+
+        updatedStyle.section.header.opts = {
+            position = "center",
+            hl = "Type",
+            shrink_margin = false,
+        }
+
+        updatedStyle.section.top_buttons.val = {}
+        updatedStyle.section.mru_cwd.val = {}
+
+        updatedStyle.section.mru.val[2].val = "Recent Files"
+
+        require"alpha".setup(updatedStyle.opts)
     end
 }
