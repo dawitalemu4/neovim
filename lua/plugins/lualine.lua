@@ -26,7 +26,7 @@ return {
                 a = { fg = colors.white, bg = colors.black },
                 b = { fg = colors.white, bg = colors.black },
                 c = { fg = colors.white, bg = colors.black },
-            },
+            }
         }
 
         require"lualine".setup {
