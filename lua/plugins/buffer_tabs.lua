@@ -3,6 +3,7 @@ return {
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
+
         local bufferline = require"bufferline"
 
         bufferline.setup({
@@ -19,5 +20,6 @@ return {
         vim.keymap.set("n", "tp", ":BufferLinePick<CR>", {})
         vim.keymap.set("n", "td", ":BufferLinePickClose<CR>", {})
         vim.keymap.set("n", "ta", ":BufferLineCloseOthers<CR>", {})
+
     end
 }
