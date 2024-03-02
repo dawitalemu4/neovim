@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require"mason-lspconfig".setup({
-                ensure_installed = { "lua_ls", "tsserver", "quick_lint_js", "html", "cssls", "pylsp", "jdtls", "bashls", "jsonls", "sqlls", "tailwindcss", "marksman", "grammarly", "typos_lsp" }
+                ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "pylsp", "jdtls", "jsonls", "sqlls", "tailwindcss", "marksman", "typos_lsp" }
             })
         end
     },
@@ -22,64 +22,56 @@ return {
             local lspconfig = require"lspconfig"
             local capabilities = require"cmp_nvim_lsp".default_capabilities()
 
-            local get_path = function(file)
-                return { vim.fn.stdpath("data") .. "/mason/bin/" .. file .. ".CMD" }
+            local get_path = function(file, flag)
+                if flag == nil then
+                    return { vim.fn.stdpath("data") .. "/mason/bin/" .. file .. ".CMD" }
+                else
+                    return { vim.fn.stdpath("data") .. "/mason/bin/" .. file .. ".CMD", flag }
+                end
             end
 
             lspconfig.lua_ls.setup({
-                cmd = get_path("lua-language-server"),
+                cmd = get_path("lua-language-server", nil),
                 capabilities = capabilities
             })
             lspconfig.tsserver.setup({
-                cmd = get_path("typescript-language-server"),
-                capabilities = capabilities
-            })
-            lspconfig.quick_lint_js.setup({
-                cmd = get_path("quick-lint-js"),
+                cmd = get_path("typescript-language-server", "--stdio"),
                 capabilities = capabilities
             })
             lspconfig.html.setup({
-                cmd = get_path("vscode-html-language-server"),
+                cmd = get_path("vscode-html-language-server", "--stdio"),
                 capabilities = capabilities
             })
             lspconfig.cssls.setup({
-                cmd = get_path("vscode-css-language-server"),
+                cmd = get_path("vscode-css-language-server", "--stdio"),
                 capabilities = capabilities
             })
             lspconfig.pylsp.setup({
-                cmd = get_path("pylsp"),
+                cmd = get_path("pylsp", nil),
                 capabilities = capabilities
             })
             lspconfig.jdtls.setup({
-                cmd = get_path("jdtls"),
-                capabilities = capabilities
-            })
-            lspconfig.bashls.setup({
-                cmd = get_path("bash-language-server"),
+                cmd = get_path("jdtls", nil),
                 capabilities = capabilities
             })
             lspconfig.jsonls.setup({
-                cmd = get_path("vscode-json-language-server"),
+                cmd = get_path("vscode-json-language-server", "--stdio"),
                 capabilities = capabilities
             })
             lspconfig.sqlls.setup({
-                cmd = get_path("sql-language-server"),
+                cmd = get_path("sql-language-server", nil),
                 capabilities = capabilities
             })
             lspconfig.tailwindcss.setup({
-                cmd = get_path("tailwindcss-language-server"),
+                cmd = get_path("tailwindcss-language-server", nil),
                 capabilities = capabilities
             })
             lspconfig.marksman.setup({
-                cmd = get_path("marksman"),
-                capabilities = capabilities
-            })
-            lspconfig.grammarly.setup({
-                cmd = get_path("grammarly-languageserver"),
+                cmd = get_path("marksman", nil),
                 capabilities = capabilities
             })
             lspconfig.typos_lsp.setup({
-                cmd = get_path("typos-lsp"),
+                cmd = get_path("typos-lsp", nil),
                 capabilities = capabilities
             })
 
