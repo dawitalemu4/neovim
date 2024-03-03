@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require"mason-lspconfig".setup({
-                ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "pylsp", "jdtls", "jsonls", "sqlls", "tailwindcss", "marksman", "typos_lsp" }
+                ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "pylsp", "jdtls", "jsonls", "tailwindcss", "marksman", "typos_lsp" }
             })
         end
     },
@@ -52,14 +52,13 @@ return {
             })
             lspconfig.jdtls.setup({
                 cmd = get_path("jdtls", nil),
-                capabilities = capabilities
+                capabilities = capabilities,
+                root_dir = function(fname)
+                    return require"lspconfig".util.root_pattern("pom.xml", "gradle.build", ".java", ".git")(fname) or vim.fn.getcwd()
+                end
             })
             lspconfig.jsonls.setup({
                 cmd = get_path("vscode-json-language-server", "--stdio"),
-                capabilities = capabilities
-            })
-            lspconfig.sqlls.setup({
-                cmd = get_path("sql-language-server", nil),
                 capabilities = capabilities
             })
             lspconfig.tailwindcss.setup({
