@@ -7,6 +7,7 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
+vim.cmd("set nofixendofline")
 vim.cmd("syntax enable")
 
 vim.keymap.set("v", "k", ":m '>+1<CR>gv=gv")
