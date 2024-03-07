@@ -54,7 +54,7 @@ return {
                 cmd = get_path("jdtls", nil),
                 capabilities = capabilities,
                 root_dir = function(fname)
-                    return require"lspconfig".util.root_pattern("pom.xml", "gradle.build", ".java", ".git")(fname) or vim.fn.getcwd()
+                    return lspconfig.util.root_pattern("pom.xml", "gradle.build", ".git")(fname) or vim.fn.getcwd()
                 end
             })
             lspconfig.jsonls.setup({
@@ -75,6 +75,7 @@ return {
             })
 
             vim.keymap.set("n", "<C-a>", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<C-s>", vim.lsp.buf.definition, {})
             -- vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
 
         end
