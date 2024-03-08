@@ -44,7 +44,8 @@ return {
             })
             lspconfig.cssls.setup({
                 cmd = get_path("vscode-css-language-server", "--stdio"),
-                capabilities = capabilities
+                capabilities = capabilities,
+                filetypes = { "css", "scss", "less", "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
             })
             lspconfig.pylsp.setup({
                 cmd = get_path("pylsp", nil),
