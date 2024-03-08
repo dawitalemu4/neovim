@@ -22,7 +22,7 @@ return {
 
             vim.keymap.set("n", "<C-f>", telescope_builtin.find_files, {})
             vim.keymap.set("n", "<C-g>", telescope_builtin.live_grep, {})
-        
+
         end
     }
 }
