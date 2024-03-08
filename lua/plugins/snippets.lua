@@ -26,8 +26,11 @@ return {
                     completion = cmp.config.window.bordered(),
                     documentation = cmp.config.window.bordered(),
                 },
+                preselect = cmp.PreselectMode.None,
                 mapping = cmp.mapping.preset.insert({
-                    ["<C-Space>"] = cmp.mapping.complete()
+                    ['<C-Up>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
+                    ['<C-Down>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+                    ['<Tab>'] = cmp.mapping.confirm({ select = true })
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },

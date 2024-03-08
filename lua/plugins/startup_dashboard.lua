@@ -3,6 +3,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function ()
 
+        local alpha = require"alpha"
         local updatedStyle = require"alpha.themes.startify"
 
         updatedStyle.section.header.opts = {
@@ -16,7 +17,7 @@ return {
 
         updatedStyle.section.mru.val[2].val = "Recent Files"
 
-        require"alpha".setup(updatedStyle.opts)
+        alpha.setup(updatedStyle.opts)
 
     end
 }
