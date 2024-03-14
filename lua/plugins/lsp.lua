@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require"mason-lspconfig".setup({
-                ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "pylsp", "jdtls", "jsonls", "tailwindcss", "marksman", "typos_lsp" }
+                ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "pylsp", "jdtls", "jsonls", "tailwindcss", "marksman", "typos_lsp", "emmet_language_server" }
             })
         end
     },
@@ -72,6 +72,10 @@ return {
             })
             lspconfig.typos_lsp.setup({
                 cmd = get_path("typos-lsp", nil),
+                capabilities = capabilities
+            })
+            lspconfig.emmet_language_server.setup({
+                cmd = get_path("emmet-language-server", "--stdio"),
                 capabilities = capabilities
             })
 
