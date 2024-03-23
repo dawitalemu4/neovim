@@ -10,7 +10,6 @@ return {
             options = {
                 style_preset = bufferline.style_preset.minimal,
                 diagnostics = "nvim_lsp",
-                show_duplicate_prefix = false,
                 buffer_close_icon = "",
                 separator_style = {"", ""}
             }
