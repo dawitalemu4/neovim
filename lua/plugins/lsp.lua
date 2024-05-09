@@ -17,6 +17,15 @@ return {
         "neovim/nvim-lspconfig",
         dependencies = { "hrsh7th/nvim-cmp", "hrsh7th/cmp-nvim-lsp" },
         event = { "BufReadPre", "BufNewFile" },
+        opts = {
+            capabilities = {
+                workspace = {
+                    didChangeWatchedFiles = {
+                        dynamicRegistration = true,
+                    }
+                }
+            }
+        },
         config = function()
 
             local lspconfig = require"lspconfig"

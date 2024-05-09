@@ -60,10 +60,10 @@
                     "type": "executiontime",
                     "style": "powerline",
                     "foreground": "#a9ffb4",
-                    "template": " {{ .FormattedMs }}s ",
+                    "template": " {{ .FormattedMs }} ",
                     "properties": {
                         "threshold": 0,
-                        "style": "dallas"
+                        "style": "round"
                     }
                 }
             ]

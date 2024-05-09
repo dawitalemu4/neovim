@@ -1,0 +1,77 @@
+{
+    "version": 2,
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "console_title_template": "{{ .Folder }}",
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "#FEF5ED",
+        "template": "{{ .Shell }}"
+    },
+    "palette": {
+        "os": "#ACB0BE",
+        "pink": "#F5BDE6",
+        "lavender": "#B7BDF8",
+        "blue":  "#8AADF4",
+        "wight": "#FFFFFF",
+        "text": "#494D64"
+    },
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "overflow": "break",
+            "segments": [
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "background": "p:blue",
+                    "foreground": "p:text",
+                    "leading_diamond": "\ue0b6",
+                    "properties": {
+                        "time_format": "3:04 PM"
+                    },
+                    "template": " {{ .CurrentDate | date .Format }} "
+                },
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "background": "p:pink",
+                    "foreground": "p:text",
+                    "properties": {
+                        "folder_separator_icon": "/",
+                        "home_icon": "~",
+                        "style": "agnoster_short"
+                    },
+                    "powerline_symbol": "\ue0b4",
+                    "template": " {{ .Path }}"
+                },
+                {
+                    "type": "git",
+                    "style": "powerline",
+                    "background": "p:lavender",
+                    "foreground": "p:text",
+                    "powerline_symbol": "\ue0b4",
+                    "template": " {{ .HEAD }} "
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "overflow": "break",
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "diamond",
+                    "foreground": "#FFF",
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "template": "$ "
+                }
+            ]
+        }
+    ]
+}
