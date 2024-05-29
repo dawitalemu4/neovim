@@ -2,11 +2,6 @@
     "version": 2,
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "console_title_template": "{{ .Folder }}",
-    "transient_prompt": {
-        "background": "transparent",
-        "foreground": "#FEF5ED",
-        "template": "{{ .Shell }}"
-    },
     "blocks": [
         {
             "type": "prompt",
