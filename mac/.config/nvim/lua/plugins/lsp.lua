@@ -30,14 +30,6 @@ return {
             local lspconfig = require"lspconfig"
             local capabilities = require"cmp_nvim_lsp".default_capabilities()
 
-            local get_path = function(file, flag)
-                if flag == nil then
-                    return { vim.fn.stdpath("data") .. "/mason/bin/" .. file .. ".CMD" }
-                else
-                    return { vim.fn.stdpath("data") .. "/mason/bin/" .. file .. ".CMD", flag }
-                end
-            end
-
             lspconfig.lua_ls.setup({
                 capabilities = capabilities
             })
