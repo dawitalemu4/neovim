@@ -47,6 +47,9 @@
                     "background": "p:lavender",
                     "foreground": "p:text",
                     "powerline_symbol": "\ue0b4",
+                    "properties": {
+                        "branch_icon": ""
+                    },
                     "template": " {{ .HEAD }} "
                 }
             ]
