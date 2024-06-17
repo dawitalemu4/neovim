@@ -13,6 +13,66 @@
     "blocks": [
         {
             "type": "prompt",
+            "alignment": "right",
+            "newline": true,
+            "overflow": "hide",
+            "segments": [
+                {
+                    "type": "go",
+                    "style": "powerline",
+                    "foreground": "#00ADD8",
+                    "template": " \ue627 "
+                },
+                {
+                    "type": "lua",
+                    "style": "powerline",
+                    "foreground": "#000080",
+                    "template": " \ue620 "
+                },
+                {
+                    "type": "rust",
+                    "style": "powerline",
+                    "foreground": "#b7410e",
+                    "template": " \ue68b "
+                },
+                {
+                    "type": "python",
+                    "style": "powerline",
+                    "foreground": "#3572A5",
+                    "template": " \ue73c "
+                },
+                {
+                    "type": "java",
+                    "style": "powerline",
+                    "foreground": "#FF4500",
+                    "template": " \ue738 "
+                },
+                {
+                    "type": "node",
+                    "style": "powerline",
+                    "foreground": "#45bf17",
+                    "template": " \ue718 "
+                },
+                {
+                    "type": "react",
+                    "style": "powerline",
+                    "foreground": "#61dafb",
+                    "template": " \ue7ba "
+                },
+                {
+                    "type": "executiontime",
+                    "style": "powerline",
+                    "foreground": "#a9ffb4",
+                    "template": " {{ .FormattedMs }} ",
+                    "properties": {
+                        "threshold": 0,
+                        "style": "round"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
             "alignment": "left",
             "newline": true,
             "overflow": "break",

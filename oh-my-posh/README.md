@@ -14,6 +14,6 @@ Find a theme that has a structure you like and edit its file in `oh-my-posh/them
 
 ## Dissolving Edges
 
-![image](https://ohmyposh.dev/assets/images/cert-13ccf84c015c276a8502036e57c26099.png)
+![image](https://ohmyposh.dev/assets/images/cert-5c20e6db4c7b51159783f9f8f7afd9ff.png)
 
 [Installation guide](https://gglas.ninja/blog/2022/07/how-to-setup-oh-my-posh-in-windows-terminal) (I just used the mingw command and added the `eval ...` command to `.bash_profile`): https://gglas.ninja/blog/2022/07/how-to-setup-oh-my-posh-in-windows-terminal
