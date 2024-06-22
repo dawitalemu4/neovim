@@ -6,7 +6,7 @@ Find a theme that has a structure you like and edit its file in `oh-my-posh/them
 
 ## My theme
 
-![image](https://github.com/dawitalemu4/neovim/assets/106638403/5f0a98e9-e8fc-48ac-aedb-48161575da59)
+![image](https://github.com/dawitalemu4/neovim/assets/106638403/ed5f2ef6-73f9-4af0-954b-627d84e0097c)
 
 ## Structure
 
@@ -14,6 +14,6 @@ Find a theme that has a structure you like and edit its file in `oh-my-posh/them
 
 ## Dissolving Edges
 
-![image](https://ohmyposh.dev/assets/images/cert-5c20e6db4c7b51159783f9f8f7afd9ff.png)
+![cert-2f85364710c60c6c87f62e7fd85358a5](https://github.com/dawitalemu4/neovim/assets/106638403/9ea6bbc3-4c98-45ab-a08e-cb5d34bd0249)
 
 [Installation guide](https://gglas.ninja/blog/2022/07/how-to-setup-oh-my-posh-in-windows-terminal) (I just used the mingw command and added the `eval ...` command to `.bash_profile`): https://gglas.ninja/blog/2022/07/how-to-setup-oh-my-posh-in-windows-terminal
