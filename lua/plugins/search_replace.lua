@@ -3,7 +3,8 @@ return {
     config = function()
 
         require"nvim-search-and-replace".setup({
-            replace_keymap = "<C-y>",
+            ignore = { "**/node_modules/**", "**/.git/**", "**/.gitignore", "**/.gitmodules", "build/**" },
+            replace_all_and_save_keymap = "<C-y>",
             update_changes = true
         })
 
