@@ -833,3 +833,4 @@ $env.config = {
 # custom config starts here
 source ~/.oh-my-posh.nu
 $env.Path = ($env.Path | prepend 'C:\Program Files\Git\usr\bin')
+fnm env --shell powershell | fnm-nushell | from json | load-env
