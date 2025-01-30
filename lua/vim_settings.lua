@@ -12,6 +12,7 @@ vim.cmd("syntax enable")
 
 vim.keymap.set("v", "k", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "j", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "<esc>", ":noh<CR>", { silent = true, noremap = true })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
