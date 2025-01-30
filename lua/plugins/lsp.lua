@@ -94,6 +94,8 @@ return {
 
             vim.keymap.set("n", "<C-a>", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<C-s>", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<C-x>", vim.lsp.buf.rename, {})
+            vim.keymap.set("n", "<C-i>", require "telescope.builtin".lsp_implementations, {})
             -- vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
 
         end

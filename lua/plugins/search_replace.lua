@@ -1,13 +1,19 @@
 return {
-    "s1n7ax/nvim-search-and-replace",
+    "nvim-pack/nvim-spectre",
     config = function()
 
-        require"nvim-search-and-replace".setup({
-            ignore = { "**/node_modules/**", "**/.git/**", "**/.gitignore", "**/.gitmodules", "build/**" },
-            replace_all_and_save_keymap = "<C-y>",
-            update_changes = true
+        require"spectre".setup({
+            mapping = {
+                ["run_replace"] = {
+                    map = "<Enter>",
+                    cmd = "<cmd>lua require('spectre.actions').run_replace()<CR>",
+                    desc = "replace all"
+                }
+            }
         })
 
-        vim.keymap.set("n", "<esc>", ":noh<CR>", { silent = true, noremap = true })
+        vim.keymap.set("n", "<C-y>", "<cmd>lua require('spectre').toggle()<CR>", {
+            desc = "Toggle Spectre"
+        })
     end
 }
