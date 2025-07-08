@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require"mason-lspconfig".setup({
-                ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "pylsp", "jdtls", "jsonls", "tailwindcss", "marksman", "typos_lsp", "emmet_language_server", "gopls", "rust_analyzer" }
+                ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "pylsp", "jdtls", "jsonls", "tailwindcss", "marksman", "typos_lsp", "emmet_language_server", "gopls", "rust_analyzer", "zls" }
             })
         end
     },
@@ -93,6 +93,10 @@ return {
             })
             lspconfig.rust_analyzer.setup({
                 cmd = get_path("rust-analyzer", nil),
+                capabilities = capabilities
+            })
+            lspconfig.zls.setup({
+                cmd = get_path("zls", nil),
                 capabilities = capabilities
             })
 
